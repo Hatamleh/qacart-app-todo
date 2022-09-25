@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,400;0,500;1,600&family=Inconsolata:wght@400;700&display=swap');
+
+:root {
+  --main-color: #171d25;
+  --secondary-color: #414349;
+  --third-color: #81808b;
+  --forth-color: #d3822f;
+  --main-font-color: #f0ede5;
+  --main-font-family: 'Inconsolata', monospac;
+  --secondary-font-family: 'Exo', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-color);
+  color: var(--main-font-color);
+  font-family: var(--main-font-family);
+}
+
+.MuiOutlinedInput-input,
+.MuiInputLabel-outlined,
+.MuiInputLabel-shrink {
+  border-color: #fff !important;
+  color: #fff !important;
+  border-radius: 16px !important;
+}
+
+.MuiOutlinedInput-notchedOutline,
+.MuiInputLabel-shrink {
+  border-color: rgb(145, 158, 171) !important;
+  color: #fff !important;
+  border-radius: 16px !important;
+}
+
+.MuiDivider-root {
+  background-color: rgb(145, 158, 171) !important;
+  margin: 10px 0 !important;
+  opacity: 0.5 !important;
+}
+
+.MuiSvgIcon-root {
+  color: #fff !important;
+}

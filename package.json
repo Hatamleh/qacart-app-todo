@@ -1,0 +1,16 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "A Project used for testing",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd backend && npm install  && cd ../frontend && npm install && npm run build",
+    "start": "node backend/server.js && cd ../frontend && npm run start"
+  },
+  "keywords": [],
+  "author": "Hatem Hatamleh",
+  "license": "ISC",
+  "engines": {
+    "node": "14"
+  }
+}
