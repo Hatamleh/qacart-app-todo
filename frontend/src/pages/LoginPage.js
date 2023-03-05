@@ -135,6 +135,9 @@ function LoginPage() {
                   </FormSubHeader>
                   <FormInput
                      required
+                     className="email signin-input"
+                     id="email"
+                     name="email"
                      label="Email"
                      variant="outlined"
                      type="email"
@@ -145,12 +148,14 @@ function LoginPage() {
                      id="login"
                      inputProps={{
                         "data-testid": "email",
-                        className: "login-input",
+                        className: "login-input email",
                      }}
                   />
                   <FormInput
                      required
                      label="Password"
+                     id="password"
+                     name="password"
                      variant="outlined"
                      type="password"
                      value={password}
@@ -167,6 +172,9 @@ function LoginPage() {
                   ) : (
                      <Button
                         variant="contained"
+                        className: "login-button submit"
+                        id="submit"
+                        name="submit"
                         color="primary"
                         onClick={handleSubmit}
                         data-testid="submit"
