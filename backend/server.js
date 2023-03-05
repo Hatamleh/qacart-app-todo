@@ -14,6 +14,8 @@ import UserRoutes from './routes/users.js';
 import TaskRoutes from './routes/tasks.js';
 import seedRouter from './routes/seedRoutes.js';
 import infoRouter from './routes/info.js';
+import coursesRouter from './routes/courses.js';
+import studentsRoute from './routes/students.js';
 
 const __dirname = path.resolve();
 
@@ -41,7 +43,9 @@ app.use(express.static(path.join(__dirname, '/frontend/build')));
 
 // Use Routes
 app.use('/api/v1/users', UserRoutes);
+app.use('/api/v1/students', studentsRoute);
 app.use('/api/v1/tasks', authenticateToken, TaskRoutes);
+app.use('/api/v1/courses', authenticateToken, coursesRouter);
 app.use('/api/v1/seed', seedRouter);
 app.use('/api/v1/info', infoRouter);
 
