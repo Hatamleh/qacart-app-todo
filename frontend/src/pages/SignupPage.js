@@ -52,7 +52,7 @@ function SignupPage() {
 			return;
 		}
 
-		if (!lastName || lastName.length < 3) {
+		if (!lastName || lastName.length < 3 || lastName.length > 16) {
 			setLastNameError(
 				'Last Name is required, and it should be more than 3 characters'
 			);
@@ -64,7 +64,7 @@ function SignupPage() {
 			return;
 		}
 
-		if (!password || password.length < 8) {
+		if (!password || password.length < 8 ) {
 			setPasswordError(
 				'Password must be Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character'
 			);

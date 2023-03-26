@@ -58,6 +58,19 @@ const lectures = [
 	},
 ];
 
+const technology = {
+	frontend: {
+		language: 'JAVASCRIPT',
+		tools: ['REACT', 'AXIOS'],
+		pages: 4,
+	},
+	backend: {
+		language: 'JAVASCRIPT',
+		tools: ['EXPRESS', 'bcryptjs', 'dotenv'],
+		apis: 13,
+	},
+};
+
 infoRouter.get('/courses', (req, res) => {
 	const { type, language } = req.headers;
 
@@ -126,6 +139,27 @@ infoRouter.get('/lectures', (req, res) => {
 	return res.status(200).json({
 		lectures,
 		count: lectures.length,
+	});
+});
+
+infoRouter.get('/', (req, res) => {
+	const type = req.query.type;
+	console.log(type);
+
+	if (type === 'frontend') {
+		return res.status(200).json({
+			frontend: technology[type],
+		});
+	}
+
+	if (type === 'backend') {
+		return res.status(200).json({
+			backend: technology[type],
+		});
+	}
+
+	return res.status(200).json({
+		technology,
 	});
 });
 

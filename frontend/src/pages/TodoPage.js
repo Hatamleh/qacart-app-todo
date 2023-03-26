@@ -74,7 +74,7 @@ const getWelcome = () => {
 
 const getName = (name) => {
    if (!name || name.length < 2 || name.includes("@") || name.includes(".")) {
-      return "user";
+      return "User";
    } else {
       return name;
    }
