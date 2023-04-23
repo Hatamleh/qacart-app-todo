@@ -90,6 +90,7 @@ router.put('/:id', async (req, res) => {
 });
 
 router.delete('/:id', async (req, res) => {
+	console.log(req.user);
 	const taskID = req.params.id;
 	try {
 		const deletedTask = await Task.findByIdAndDelete(taskID);
