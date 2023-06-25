@@ -7,12 +7,7 @@ function authenticateToken(req, res, next) {
 	if (authHeader) {
 		token = authHeader && authHeader.split(' ')[1];
 	}
-	if (req.cookies['access_token']) {
-		token = req.cookies['access_token'];
-	}
-
-	console.log('token', token);
-
+	
 	if (!token)
 		return res.status(401).json({
 			message: 'Unauthorized, please insert a correct token',
