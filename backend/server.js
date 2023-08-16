@@ -46,7 +46,7 @@ app.use('/api/v1/users', UserRoutes);
 app.use('/api/v1/students', studentsRoute);
 app.use('/api/v1/tasks', authenticateToken, TaskRoutes);
 app.use('/api/v1/courses', authenticateToken, coursesRouter);
-app.use('/api/v1/seed', seedRouter);
+app.use('/api/v1/clear', authenticateToken, seedRouter);
 app.use('/api/v1/info', infoRouter);
 
 app.use(express.static(path.join(__dirname, '/frontend/build')));
